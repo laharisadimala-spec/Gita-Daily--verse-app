@@ -28,7 +28,7 @@ export default function BottomNav({ favoritesCount }) {
           <Link
             key={item.name}
             to={item.path}
-            className="flex flex-col items-center py-1 px-3 relative min-w-[60px]"
+            className="flex flex-1 flex-col items-center py-1 px-1 relative min-w-0"
           >
             <motion.div
               whileTap={{ scale: 0.85 }}
@@ -36,14 +36,14 @@ export default function BottomNav({ favoritesCount }) {
                 isActive ? 'text-saffron-600' : 'text-cream-400 dark:text-cream-450'
               }`}
             >
-              <Icon className="w-5.5 h-5.5" />
+              <Icon className="w-5 h-5 md:w-6 md:h-6" />
               {item.badge > 0 && (
-                <span className="absolute -top-1.5 -right-2 bg-saffron-600 text-white rounded-full text-[9px] font-bold w-4 h-4 flex items-center justify-center border border-white">
+                <span className="absolute -top-1.5 -right-1 bg-saffron-600 text-white rounded-full text-[9px] font-bold w-4 h-4 flex items-center justify-center border border-white">
                   {item.badge}
                 </span>
               )}
             </motion.div>
-            <span className={`text-[10px] tracking-tight mt-0.5 ${
+            <span className={`text-[9px] md:text-[10px] tracking-tight mt-1 truncate w-full text-center ${
               isActive ? 'text-saffron-700 font-bold' : 'text-cream-400'
             }`}>
               {item.name}
