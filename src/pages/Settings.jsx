@@ -220,6 +220,13 @@ export default function Settings({ clearFavorites, resetProgress }) {
           </PrimaryButton>
         </div>
       </GlassCard>
+
+      {/* Creator Credit */}
+      <div className="text-center pt-8 pb-4">
+        <p className="text-xs font-serif font-medium text-saffron-600/80 tracking-wide">
+          Made with devotion by Lahari Sadimala ✨
+        </p>
+      </div>
     </div>
   );
 }

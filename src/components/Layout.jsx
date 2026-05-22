@@ -127,9 +127,8 @@ export default function Layout({ children, favoritesCount }) {
                 </nav>
               </div>
 
-              <div className="pt-6 border-t border-cream-200 text-center text-xs text-cream-400 font-medium">
-                <p>Gita Daily • Spiritual Companion</p>
-                <p className="mt-1">Dharma is Eternal</p>
+              <div className="pt-6 border-t border-cream-200 text-center text-xs text-saffron-600/80 font-serif font-medium tracking-wide">
+                <p>Made with devotion by Lahari Sadimala ✨</p>
               </div>
             </motion.div>
           </>

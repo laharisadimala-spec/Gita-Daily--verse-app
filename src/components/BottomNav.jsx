@@ -14,7 +14,7 @@ export default function BottomNav({ favoritesCount }) {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-cream-200 flex justify-around py-2.5 z-25 shadow-lg">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-cream-200 flex justify-around py-2.5 z-50 shadow-lg pb-safe">
       {navItems.map((item) => {
         const isActive = location.pathname === item.path;
         const Icon = item.icon;

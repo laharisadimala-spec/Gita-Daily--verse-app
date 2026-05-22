@@ -12,7 +12,7 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Layout from './components/Layout.jsx';
 import GlassCard from './components/GlassCard.jsx';
@@ -56,6 +56,37 @@ export function AppContent() {
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Service Worker Update Handling
+  const [updateAvailable, setUpdateAvailable] = useState(false);
+  const [newWorker, setNewWorker] = useState(null);
+
+  useEffect(() => {
+    const handleUpdate = (event) => {
+      setNewWorker(event.detail);
+      setUpdateAvailable(true);
+    };
+    window.addEventListener('sw-update', handleUpdate);
+    return () => window.removeEventListener('sw-update', handleUpdate);
+  }, []);
+
+  useEffect(() => {
+    let refreshing = false;
+    const handleControllerChange = () => {
+      if (!refreshing) {
+        refreshing = true;
+        window.location.reload();
+      }
+    };
+    navigator.serviceWorker?.addEventListener('controllerchange', handleControllerChange);
+    return () => navigator.serviceWorker?.removeEventListener('controllerchange', handleControllerChange);
+  }, []);
+
+  const handleRefreshApp = () => {
+    if (newWorker) {
+      newWorker.postMessage({ type: 'SKIP_WAITING' });
+    }
+  };
 
   // Ambient flute music support in background
   useEffect(() => {
@@ -104,6 +135,7 @@ export function AppContent() {
   }, []);
 
   return (
+    <>
     <Layout favoritesCount={favorites.length}>
       <Routes>
         <Route path="/" element={<Home favorites={favorites} toggleFavorite={toggleFavorite} verseOfTheDay={dailyVerse} />} />
@@ -129,6 +161,28 @@ export function AppContent() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>
+    
+    <AnimatePresence>
+      {updateAvailable && (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          className="fixed bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-[100] bg-saffron-850 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-4 w-[90%] max-w-sm border border-saffron-600/50"
+        >
+          <div className="flex-1">
+            <p className="font-serif font-bold text-sm tracking-wide">New spiritual update available ✨</p>
+          </div>
+          <button
+            onClick={handleRefreshApp}
+            className="bg-saffron-500 hover:bg-saffron-400 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap shadow-md"
+          >
+            Refresh
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 }
 
