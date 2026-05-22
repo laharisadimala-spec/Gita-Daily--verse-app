@@ -1,18 +1,45 @@
-const CACHE_NAME = 'gita-daily-v2';
+const CACHE_NAME = 'gita-daily-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
   '/manifest.json?v=2',
   '/favicon.png?v=2',
-  '/apple-touch-icon.png?v=2'
+  '/apple-touch-icon.png?v=2',
+  '/icons/icon-192x192.png?v=2',
+  '/icons/icon-512x512.png?v=2',
+  '/icons/maskable-192x192.png?v=2',
+  '/icons/maskable-512x512.png?v=2'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Service Worker: Caching App Shell');
-        return cache.addAll(ASSETS_TO_CACHE);
+      .then(async (cache) => {
+        console.log('Service Worker: Caching App Shell and Icons');
+        // First pre-cache static assets
+        await cache.addAll(ASSETS_TO_CACHE);
+
+        // Now dynamically fetch index.html and parse it for Vite bundler CSS and JS filenames
+        try {
+          const response = await fetch('/index.html');
+          if (response.ok) {
+            const htmlText = await response.text();
+            
+            // Match paths starting with /assets/ and ending with .js or .css
+            const assetRegex = /\/assets\/[a-zA-Z0-9_\-\.]+\.(?:js|css)/g;
+            const matches = htmlText.match(assetRegex) || [];
+            
+            // Filter duplicates
+            const dynamicAssets = [...new Set(matches)];
+            console.log('Service Worker: Found Vite bundles in index.html to pre-cache:', dynamicAssets);
+            
+            if (dynamicAssets.length > 0) {
+              await cache.addAll(dynamicAssets);
+            }
+          }
+        } catch (err) {
+          console.error('Service Worker: Failed to pre-cache Vite bundle assets', err);
+        }
       })
       .then(() => self.skipWaiting())
   );
@@ -34,15 +61,24 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Only handle GET requests and skip browser extensions/chrome-extension protocols
-  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
+  // Only handle GET requests
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  const url = event.request.url;
+  const isGoogleFont = url.startsWith('https://fonts.googleapis.com') || url.startsWith('https://fonts.gstatic.com');
+  const isSameOrigin = url.startsWith(self.location.origin);
+
+  // Only handle same-origin requests or Google Fonts
+  if (!isSameOrigin && !isGoogleFont) {
     return;
   }
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        // Fetch in background to update cache asynchronously
+        // Fetch in background to update the cache asynchronously with the latest version from network
         fetch(event.request)
           .then((networkResponse) => {
             if (networkResponse && networkResponse.status === 200) {
@@ -56,7 +92,7 @@ self.addEventListener('fetch', (event) => {
       // Network fallback
       return fetch(event.request)
         .then((networkResponse) => {
-          if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+          if (!networkResponse || networkResponse.status !== 200) {
             return networkResponse;
           }
           
