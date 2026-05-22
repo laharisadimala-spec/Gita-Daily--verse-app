@@ -1,0 +1,25 @@
+{
+  "short_name": "Gita Daily",
+  "name": "Gita Daily - Sacred Wisdom for Daily Peace",
+  "description": "Engage with Bhagavad Gita daily verses, track meditation chanting progress, and record journal reflections.",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FCF8F2",
+  "theme_color": "#DD6B20",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["education", "lifestyle", "utilities"]
+}

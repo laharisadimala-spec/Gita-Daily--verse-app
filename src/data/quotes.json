@@ -1,0 +1,211 @@
+{
+  "quotes": [
+    "Set your heart on doing good. Do it over and over again, and you will be filled with joy.",
+    "A man is made by his belief. As he believes, so he is.",
+    "When meditation is mastered, the mind is unwavering like the flame of a candle in a windless place.",
+    "The mind is restless and difficult to control, but it can be conquered through regular practice and detachment.",
+    "Peace begins when expectation ends."
+  ],
+  "verses": [
+    {
+      "id": 1,
+      "chapter": 2,
+      "verse": 47,
+      "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥ ४७ ॥",
+      "transliteration": "karmaṇy-evādhikāras te mā phaleṣu kadācana\nmā karma-phala-hetur bhūr mā te saṅgo 'stv akarmaṇi",
+      "meaning": "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, nor be attached to inactive duty.",
+      "explanation": "This is the ultimate formula for peace of mind and focus. Perform your work with full sincerity, but release your anxiety about the outcome. When we detach ourselves from personal fruits, our work becomes a meditation and we remain unaffected by victory or defeat.",
+      "mood": "Motivation"
+    },
+    {
+      "id": 2,
+      "chapter": 2,
+      "verse": 56,
+      "sanskrit": "दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः ।\nवीतरागभयक्रोधः स्थितधीर्मुनिरुच्यते ॥ ५६ ॥",
+      "transliteration": "duḥkheṣv-anudvigna-manāḥ sukheṣu vigata-spṛhaḥ\nvīta-rāga-bhaya-krodhaḥ sthita-dhīr munir ucyate",
+      "meaning": "One whose mind remains undisturbed amidst misery, who is free from longing for pleasure, and is beyond attachment, fear, and anger, is a sage of steady wisdom.",
+      "explanation": "Remaining balanced in both success and failure leads to mental stability and composure. To overcome stress, one must train the mind to not get overly attached to comfort or terrified by discomfort.",
+      "mood": "Stress"
+    },
+    {
+      "id": 3,
+      "chapter": 2,
+      "verse": 62,
+      "sanskrit": "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते ।\nसङ्गात्सञ्जायते कामः कामात्क्रोधोऽभिजायते ॥ ६२ ॥",
+      "transliteration": "dhyāyato viṣayān puṁsaḥ saṅgas teṣūpajāyate\nsaṅgāt sañjāyate kāmaḥ kāmāt krodho 'bhijayate",
+      "meaning": "While contemplating on the objects of the senses, a person develops attachment to them. From such attachment desire develops, and from desire, anger arises.",
+      "explanation": "This verse traces the psychological descent of the mind. By constantly thinking about external objects, we create attachment. When our expectations or desires are blocked, anger is the natural and destructive result.",
+      "mood": "Anger"
+    },
+    {
+      "id": 4,
+      "chapter": 2,
+      "verse": 63,
+      "sanskrit": "क्रोधाद्भवति सम्मोहः सम्मोहात्स्मृतिविभ्रमः ।\nस्मृतिभ्रंशाद् बुद्धिनाशो बुद्धिनाशात्प्रणश्यति ॥ ६३ ॥",
+      "transliteration": "krodhād bhavati sammohaḥ sammohāt smṛti-vibhramaḥ\nsmṛti-bhraṁśād buddhi-nāśo buddhi-nāśāt praṇaśyati",
+      "meaning": "Anger leads to clouding of judgment, which results in bewilderment of memory. When memory is bewildered, intellect is destroyed, and down comes ruin.",
+      "explanation": "Anger disables the rational intellect. When we lose our sense of logic and memory, we make decisions that lead to personal and professional downfall. Controlling anger is vital for safeguarding our sanity.",
+      "mood": "Anger"
+    },
+    {
+      "id": 5,
+      "chapter": 2,
+      "verse": 14,
+      "sanskrit": "मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः ।\nआगमापायिनोऽनित्यास्तांस्तितिक्षस्व भारत ॥ १४ ॥",
+      "transliteration": "mātrā-sparśās tu kaunteya śītoṣṇa-sukha-duḥkha-dāḥ\nāgamāpāyino 'nityās tāṁs titikṣasva bhārata",
+      "meaning": "The contact of the senses with their objects gives rise to temporary feelings of cold and heat, pleasure and pain. They are transient and come and go. Bear them patiently, O descendant of Bharata.",
+      "explanation": "Life is filled with dualities like winter and summer, joy and sorrow. Realize that sensory stresses are temporary. Tolerating them with patience rather than reacting emotionally builds deep psychological resilience.",
+      "mood": "Stress"
+    },
+    {
+      "id": 6,
+      "chapter": 6,
+      "verse": 5,
+      "sanskrit": "उद्धरेदात्मनात्मानं नात्मानमवसादयेत् ।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥ ५ ॥",
+      "transliteration": "uddhared ātmanātmānaṁ nātmānam avasādayet\nātmaiva hy ātmano bandhur ātmaiva ripur ātmanaḥ",
+      "meaning": "Elevate yourself through your own mind; do not degrade yourself. The mind can be your greatest friend or your worst enemy.",
+      "explanation": "We are responsible for our own evolution. If we train our mind to be positive and disciplined, it becomes our helper. If we succumb to negative self-talk, we become our own worst enemy.",
+      "mood": "Motivation"
+    },
+    {
+      "id": 7,
+      "chapter": 6,
+      "verse": 6,
+      "sanskrit": "बन्धुरात्मात्मनस्तस्य येनात्मैवात्मना जितः ।\nअनात्मनस्तु शत्रुत्वे वर्तेतात्मैव शत्रुवत् ॥ ६ ॥",
+      "transliteration": "bandhur ātmātmanas tasya yenātmaivātmanā jitaḥ\nanātmanas tu śatrutve vartetātmaiva śatru-vat",
+      "meaning": "For those who have conquered the mind, it is their best friend. But for those who fail to do so, their mind remains their greatest enemy.",
+      "explanation": "Self-discipline is not restriction; it is the ultimate freedom. A conquered and disciplined mind behaves like an ally, directing focus towards wholesome goals, while an uncontrolled mind causes internal sabotage.",
+      "mood": "Discipline"
+    },
+    {
+      "id": 8,
+      "chapter": 6,
+      "verse": 19,
+      "sanskrit": "यथा दीपो निवातस्थो नेङ्गते सोपमा स्मृता ।\nयोगिनो यतचित्तस्य युञ्जतो योगमात्मनः ॥ १९ ॥",
+      "transliteration": "yathā dīpo nivāta-stho neṅgate sopamā smṛtā\nyogino yata-cittasya yuñjato yogam ātmanaḥ",
+      "meaning": "As a lamp in a windless place does not flicker, so the disciplined mind of a yogi remains steady in meditation on the Self.",
+      "explanation": "This beautiful analogy describes absolute concentration. By removing the winds of sensory desire and mental chatter, the mind shines with a single-pointed, steady flame of focus.",
+      "mood": "Focus"
+    },
+    {
+      "id": 9,
+      "chapter": 6,
+      "verse": 35,
+      "sanskrit": "असंशयं महाबाहो मनो दुर्निग्रहं चलम् ।\nअभ्यासेन तु कौन्तेय वैराग्येण च गृह्यते ॥ ३५ ॥",
+      "transliteration": "asaṁśayaṁ mahā-bāho mano durnigrahaṁ calam\nabhyāsena tu kaunteya vairāgyeṇa ca gṛhyate",
+      "meaning": "Without doubt, the mind is restless and difficult to curb. Yet, O Arjuna, it can be controlled by constant practice and detachment.",
+      "explanation": "Restlessness and anxiety are natural mind conditions. Krishna does not tell Arjuna to force the mind. Instead, he outlines a scientific method: gradual, persistent practice (Abhyasa) combined with detachment (Vairagya).",
+      "mood": "Anxiety"
+    },
+    {
+      "id": 10,
+      "chapter": 18,
+      "verse": 61,
+      "sanskrit": "ईश्वरः सर्वभूतानां हृद्देशेऽर्जुन तिष्ठति ।\nभ्रामयन्सर्वभूतानि यन्त्रारूढानि मायया ॥ ६१ ॥",
+      "transliteration": "īśvaraḥ sarva-bhūtānāṁ hṛd-deśe 'rjuna tiṣṭhati\nbhrāmayans sarva-bhūtāni yantrārūdhāni māyayā",
+      "meaning": "The Supreme Lord dwells in the hearts of all living beings, directing their wanderings by His material energy, as if they were seated on a machine.",
+      "explanation": "When you feel afraid or helpless, remember that you are not alone. The divine driver resides inside your heart. Surrendering to this wisdom removes the fear of the unknown and coordinates your path.",
+      "mood": "Fear"
+    },
+    {
+      "id": 11,
+      "chapter": 18,
+      "verse": 66,
+      "sanskrit": "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज ।\nअहं त्वा सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः ॥ ६६ ॥",
+      "transliteration": "sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja\nahaṁ tvā sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ",
+      "meaning": "Abandon all varieties of relative duties and surrender unto Me alone. I will deliver you from all sinful reactions. Do not fear.",
+      "explanation": "This is the ultimate comfort verse of the Gita. Krishna tells Arjuna to drop all mental worries, obligations, and failures, and place his trust in the Divine. The assurance 'Do not fear' removes spiritual and existential anxiety.",
+      "mood": "Fear"
+    },
+    {
+      "id": 12,
+      "chapter": 9,
+      "verse": 22,
+      "sanskrit": "अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते ।\nतेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम् ॥ २२ ॥",
+      "transliteration": "ananyāś cintayanto māṁ ye janāḥ paryupāsate\nteṣāṁ nityābhiyuktānāṁ yoga-kṣemaṁ vahāmy aham",
+      "meaning": "But those who always worship Me with exclusive devotion, meditating on My transcendental form—to them I carry what they lack, and I preserve what they have.",
+      "explanation": "This verse dispels the fear of lack and insecurity. God promises to personally look after both the spiritual growth and material safety of those who dedicate themselves to clean actions and divine focus.",
+      "mood": "Anxiety"
+    },
+    {
+      "id": 13,
+      "chapter": 12,
+      "verse": 15,
+      "sanskrit": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः ।\nहर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः ॥ १५ ॥",
+      "transliteration": "yasmān nodvijate loko lokān nodvijate ca yaḥ\nharṣāmarṣa-bhayodvegair mukto yaḥ sa ca me priyaḥ",
+      "meaning": "He by whom the world is not agitated and who is not agitated by the world, who is free from joy, envy, fear, and anxiety, is dear to Me.",
+      "explanation": "True spiritual peace is bidirectional: you do not cause distress to anyone, and you do not allow the actions of others to upset your inner peace. Developing this thick skin creates true, quiet joy.",
+      "mood": "Peace"
+    },
+    {
+      "id": 14,
+      "chapter": 5,
+      "verse": 21,
+      "sanskrit": "बाह्यस्पर्शेष्वसक्तात्मा विन्दत्यात्मनि यत्सुखम् ।\nस ब्रह्मयोगयुक्तात्मा सुखमक्षयमश्नुते ॥ २१ ॥",
+      "transliteration": "bāhya-sparśeṣv-asaktātmā vindaty-ātmani yat sukham\nsa brahma-yoga-yuktātmā sukham akṣayam aśnute",
+      "meaning": "One who is unattached to sensory pleasures finds happiness within. Established in union with the Divine, they enjoy eternal bliss.",
+      "explanation": "We search for peace and happiness in transient, external sensory experiences. But external things eventually perish or disappoint. True happiness is already within; tapping into it provides an inexhaustible spring of peace.",
+      "mood": "Peace"
+    },
+    {
+      "id": 15,
+      "chapter": 5,
+      "verse": 26,
+      "sanskrit": "कामक्रोधवियुक्तानां यतीनां यतचेतसाम् ।\nअभितो ब्रह्मनिर्वाणं वर्तते विदितात्मनाम् ॥ २६ ॥",
+      "transliteration": "kāma-krodha-viyuktānāṁ yatīnāṁ yata-cetasām\nabhito brahma-nirvāṇaṁ vartate viditātmanām",
+      "meaning": "For those who are free from anger and lust, who are self-disciplined and constantly strive for perfection, absolute peace is close at hand.",
+      "explanation": "Desire and anger are the two gatekeepers of misery. Overcoming them through self-mastery reveals our natural state of spiritual peace (Brahma-Nirvana) instantly.",
+      "mood": "Peace"
+    },
+    {
+      "id": 16,
+      "chapter": 4,
+      "verse": 38,
+      "sanskrit": "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते ।\nतत्स्वयं योगसंसिद्धः कालेनात्मनि विन्दति ॥ ३८ ॥",
+      "transliteration": "na hi jñānena sadṛśaṁ pavitram iha vidyate\ntat svayaṁ yoga-saṁsiddhaḥ kālenātmani vindati",
+      "meaning": "In this world, there is nothing as purifying as divine knowledge. One who becomes accomplished in Yoga finds this knowledge within themselves in due course.",
+      "explanation": "Intellectual clarity and wisdom wash away the dirt of confusion, greed, and ego. When we study the scriptures regularly and practice selflessness, we naturally discover our spiritual core.",
+      "mood": "Focus"
+    },
+    {
+      "id": 17,
+      "chapter": 4,
+      "verse": 39,
+      "sanskrit": "श्रद्धावॉल्लभते ज्ञानं तत्परः संयतेन्द्रियः ।\nज्ञानं लब्ध्वा परां शान्तिमचिरेणाधिगच्छति ॥ ३९ ॥",
+      "transliteration": "śraddhāvān labhate jñānaṁ tat-paraḥ saṁyatendriyaḥ\njñānaṁ labdhā parāṁ śāntim acireṇādhigacchati",
+      "meaning": "A person of faith, who is dedicated to knowledge and has controlled their senses, achieves it. Having gained it, they quickly attain supreme peace.",
+      "explanation": "Faith in a higher goal, coupled with sensory control, is the fuel of focus. It clears mental distractions, leading directly to supreme, permanent peace.",
+      "mood": "Focus"
+    },
+    {
+      "id": 18,
+      "chapter": 3,
+      "verse": 19,
+      "sanskrit": "तस्मादसक्तः सततं कार्यं कर्म समाचर ।\nअसक्तो ह्याचरन्कर्म परमाप्नोति पूरुषः ॥ १९ ॥",
+      "transliteration": "tasmād asaktaḥ satataṁ kāryaṁ karma samācara\nasakto hy ācaran karma param āpnoti pūruṣaḥ",
+      "meaning": "Therefore, without attachment, constantly perform your duty. By doing work without attachment, one attains the Supreme.",
+      "explanation": "Discipline means doing what needs to be done, when it needs to be done, whether you feel like it or not. Working for duty rather than personal convenience breaks the shackles of karma.",
+      "mood": "Discipline"
+    },
+    {
+      "id": 19,
+      "chapter": 3,
+      "verse": 30,
+      "sanskrit": "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा ।\nनिराशीर्निर्ममो भूत्वा युध्यस्व विगतज्वरः ॥ ३० ॥",
+      "transliteration": "mayi sarvāṇi karmāṇi sannyasyādhyātma-cetasā\nnirāśīr nirmamo bhūtvā yudhyasva vigata-jvaraḥ",
+      "meaning": "Dedicating all your actions to Me, with your mind focused on the Supreme, free from desire and possessiveness, fight without mental fever.",
+      "explanation": "Krishna asks Arjuna to perform his duty (fight) without 'mental fever' (stress/anxiety). By shifting our mindset from 'I am the doer' to 'I am an instrument of the divine,' stress melts away.",
+      "mood": "Stress"
+    },
+    {
+      "id": 20,
+      "chapter": 6,
+      "verse": 26,
+      "sanskrit": "यतो यतो निश्चरति मनश्चञ्चलमस्थिरम् ।\nततस्ततो नियम्यैतदात्मन्येव वशं नयेत् ॥ २६ ॥",
+      "transliteration": "yato yato niścarati manaś cañcalam asthiram\ntatastato niyamyaitad ātmany-eva vaśaṁ nayet",
+      "meaning": "Wherever the restless and unsteady mind wanders, one should pull it back and bring it under the control of the Self.",
+      "explanation": "This is a direct and practical meditation instruction. Concentration is not a state of constant focus; it is the act of repeatedly bringing the wandering mind back to your focal point without judgment.",
+      "mood": "Focus"
+    }
+  ]
+}

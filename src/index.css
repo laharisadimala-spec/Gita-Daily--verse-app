@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-cream-900 font-sans antialiased selection:bg-saffron-200 selection:text-saffron-800 min-h-screen;
+    background-image: 
+      radial-gradient(rgba(217, 93, 36, 0.015) 1px, transparent 0),
+      radial-gradient(rgba(197, 155, 39, 0.015) 1px, transparent 0);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+  }
+}
+
+/* Custom scrollbars with cream and saffron style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cream-300 rounded-full hover:bg-saffron-200 transition-colors;
+}
+
+/* Elegant borders and gold-accents */
+.gold-gradient-border {
+  position: relative;
+  background: linear-gradient(to right, #E6B84D, #C59B27);
+  padding: 1px;
+}
+
+.gold-gradient-border-inner {
+  @apply bg-cream-50 h-full w-full rounded-[inherit];
+}
+
+/* Spiritual aura animation */
+.spiritual-glow {
+  box-shadow: 0 0 40px rgba(217, 93, 36, 0.06), 0 0 100px rgba(230, 184, 77, 0.03);
+}
+
+.spiritual-card {
+  @apply bg-white border border-cream-200 rounded-2xl shadow-spiritual hover:shadow-spiritual-lg hover:border-saffron-200 transition-all duration-500 ease-out;
+}
