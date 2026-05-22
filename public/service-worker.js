@@ -1,14 +1,18 @@
-const CACHE_NAME = 'gita-daily-v3';
+const CACHE_NAME = 'gita-daily-v5';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/manifest.json?v=2',
-  '/favicon.png?v=2',
-  '/apple-touch-icon.png?v=2',
-  '/icons/icon-192x192.png?v=2',
-  '/icons/icon-512x512.png?v=2',
-  '/icons/maskable-192x192.png?v=2',
-  '/icons/maskable-512x512.png?v=2'
+  '/manifest.json',
+  '/favicon.png',
+  '/apple-touch-icon.png',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
+  '/icons/maskable-192.png',
+  '/icons/maskable-512.png',
+  '/icons/maskable-192x192.png',
+  '/icons/maskable-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -76,7 +80,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
+    caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
       if (cachedResponse) {
         // Fetch in background to update the cache asynchronously with the latest version from network
         fetch(event.request)
@@ -106,7 +110,7 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           // If offline and navigating to a route, serve index.html for React Router handling
           if (event.request.mode === 'navigate') {
-            return caches.match('/index.html');
+            return caches.match('/index.html', { ignoreSearch: true });
           }
         });
     })

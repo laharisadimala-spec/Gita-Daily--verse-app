@@ -1,8 +1,26 @@
 {
-  "short_name": "Gita Daily",
-  "name": "Gita Daily - Sacred Wisdom for Daily Peace",
-  "description": "Engage with Bhagavad Gita daily verses, track meditation chanting progress, and record journal reflections.",
+  "name": "Gita Daily",
+  "short_name": "GitaDaily",
+  "description": "A peaceful Bhagavad Gita app with daily verses, reflections, Sanskrit teachings, and spiritual guidance.",
+  "theme_color": "#C24D1C",
+  "background_color": "#FDFBF7",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
     {
       "src": "/icons/icon-192x192.png",
       "type": "image/png",
@@ -14,6 +32,18 @@
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
     },
     {
       "src": "/icons/maskable-192x192.png",
@@ -28,10 +58,5 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "/",
-  "background_color": "#FCF8F2",
-  "theme_color": "#DD6B20",
-  "display": "standalone",
-  "orientation": "portrait-primary",
   "categories": ["education", "lifestyle", "utilities"]
 }
