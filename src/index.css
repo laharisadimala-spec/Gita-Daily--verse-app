@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-cream-50 text-cream-900 font-sans antialiased selection:bg-saffron-200 selection:text-saffron-800 min-h-screen;
+    @apply bg-cream-50 dark:bg-[#EAE0CC] text-cream-900 dark:text-[#3A2A1A] font-sans antialiased selection:bg-saffron-200 selection:text-saffron-800 min-h-screen transition-colors duration-700;
     background-image: 
       radial-gradient(rgba(217, 93, 36, 0.015) 1px, transparent 0),
       radial-gradient(rgba(197, 155, 39, 0.015) 1px, transparent 0);
@@ -44,5 +44,5 @@
 }
 
 .spiritual-card {
-  @apply bg-white border border-cream-200 rounded-2xl shadow-spiritual hover:shadow-spiritual-lg hover:border-saffron-200 transition-all duration-500 ease-out;
+  @apply bg-white dark:bg-[#F8F4EA] border border-cream-200 dark:border-saffron-200/50 rounded-2xl shadow-spiritual dark:shadow-spiritual-lg hover:shadow-spiritual-lg dark:hover:shadow-xl hover:border-saffron-200 dark:hover:border-saffron-400 transition-all duration-500 ease-out;
 }

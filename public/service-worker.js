@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gita-daily-v7';
+const CACHE_NAME = 'gita-daily-v8';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
