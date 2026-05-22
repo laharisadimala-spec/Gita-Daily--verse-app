@@ -27,6 +27,9 @@ import Favorites from './pages/Favorites.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import MoodVerses from './pages/MoodVerses.jsx';
 import Settings from './pages/Settings.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import Terms from './pages/Terms.jsx';
+import Contact from './pages/Contact.jsx';
 
 // Data
 import gitaData from './data/gitaData.js';
@@ -121,6 +124,9 @@ export function AppContent() {
         <Route path="/favorites" element={<Favorites favorites={favorites} toggleFavorite={toggleFavorite} />} />
         <Route path="/meditation" element={<MeditationSpace />} />
         <Route path="/about" element={<About />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>
   );

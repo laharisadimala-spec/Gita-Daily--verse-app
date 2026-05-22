@@ -46,6 +46,18 @@ export default function Layout({ children, favoritesCount }) {
             {children}
           </motion.div>
         </AnimatePresence>
+        
+        {/* Footer */}
+        <footer className="mt-16 pt-8 border-t border-cream-200 text-center">
+          <div className="flex flex-wrap justify-center gap-6 mb-4">
+            <Link to="/privacy-policy" className="text-sm font-medium text-cream-455 hover:text-saffron-600 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-sm font-medium text-cream-455 hover:text-saffron-600 transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="text-sm font-medium text-cream-455 hover:text-saffron-600 transition-colors">Contact & Support</Link>
+          </div>
+          <p className="text-xs text-cream-400 font-medium tracking-wide">
+            &copy; {new Date().getFullYear()} Gita Daily. Om Shanti.
+          </p>
+        </footer>
       </div>
 
       {/* Mobile Drawer (AnimatePresence Overlay) */}
