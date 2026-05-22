@@ -1,11 +1,10 @@
-const CACHE_NAME = 'gita-daily-v1';
+const CACHE_NAME = 'gita-daily-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/manifest.json',
-  '/src/main.jsx',
-  '/src/App.jsx',
-  '/src/index.css'
+  '/manifest.json?v=2',
+  '/favicon.png?v=2',
+  '/apple-touch-icon.png?v=2'
 ];
 
 self.addEventListener('install', (event) => {
