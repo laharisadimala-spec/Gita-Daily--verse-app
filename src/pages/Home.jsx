@@ -74,6 +74,16 @@ export default function Home({ favorites, toggleFavorite, verseOfTheDay }) {
           >
             “Delivering clarity, courage, and calmness through the timeless teachings of Shri Krishna.”
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="pt-3"
+          >
+            <p className="font-serif text-xs md:text-sm font-bold bg-gradient-to-r from-saffron-550 to-gold-500 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(230,184,77,0.4)] tracking-wide inline-block">
+              Made with devotion by Lahari Sadimala ✨
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -207,12 +217,6 @@ export default function Home({ favorites, toggleFavorite, verseOfTheDay }) {
         </div>
       </div>
 
-      {/* Creator Credit */}
-      <div className="text-center pt-8 pb-4">
-        <p className="text-xs font-serif font-medium text-saffron-600/80 tracking-wide">
-          Made with devotion by Lahari Sadimala ✨
-        </p>
-      </div>
     </div>
   );
 }
