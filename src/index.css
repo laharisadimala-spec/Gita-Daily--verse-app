@@ -44,5 +44,5 @@
 }
 
 .spiritual-card {
-  @apply bg-white dark:bg-[#F8F4EA] border border-cream-200 dark:border-saffron-200/50 rounded-2xl shadow-spiritual dark:shadow-spiritual-lg hover:shadow-spiritual-lg dark:hover:shadow-xl hover:border-saffron-200 dark:hover:border-saffron-400 transition-all duration-500 ease-out;
+  @apply bg-white dark:bg-[#F8F4EA] border border-cream-200 dark:border-saffron-200/50 rounded-2xl shadow-spiritual dark:shadow-spiritual-lg hover:shadow-spiritual-lg dark:hover:shadow-xl hover:border-saffron-200 dark:hover:border-saffron-500 transition-all duration-500 ease-out;
 }
