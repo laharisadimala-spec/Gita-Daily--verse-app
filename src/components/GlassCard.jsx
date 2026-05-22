@@ -25,7 +25,7 @@ export default function GlassCard({
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       {...hoverProps}
       {...clickableProps}
-      className={`bg-white/70 backdrop-blur-md border border-white/60 rounded-2xl p-6 shadow-spiritual relative overflow-hidden transition-all duration-300 ${
+      className={`bg-white/70 dark:bg-white/90 backdrop-blur-md border border-white/60 dark:border-saffron-200/50 rounded-2xl p-6 shadow-spiritual dark:shadow-spiritual-lg relative overflow-hidden transition-all duration-500 ${
         onClick ? 'cursor-pointer' : ''
       } ${className}`}
     >

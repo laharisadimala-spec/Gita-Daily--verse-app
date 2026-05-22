@@ -14,7 +14,7 @@ export default function BottomNav({ favoritesCount }) {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-cream-200 flex justify-around py-2.5 z-50 shadow-lg pb-safe">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-white/90 backdrop-blur-md border-t border-cream-200 dark:border-saffron-200/50 flex justify-around py-2.5 z-50 shadow-lg dark:shadow-spiritual-lg pb-safe transition-colors duration-500">
       {navItems.map((item) => {
         const isActive = location.pathname === item.path;
         const Icon = item.icon;
@@ -28,7 +28,7 @@ export default function BottomNav({ favoritesCount }) {
             <motion.div
               whileTap={{ scale: 0.85 }}
               className={`p-1 rounded-full relative transition-colors ${
-                isActive ? 'text-saffron-600' : 'text-cream-400'
+                isActive ? 'text-saffron-600' : 'text-cream-400 dark:text-cream-450'
               }`}
             >
               <Icon className="w-5.5 h-5.5" />

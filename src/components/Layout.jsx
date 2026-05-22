@@ -33,7 +33,7 @@ export default function Layout({ children, favoritesCount }) {
       />
 
       {/* Main Container */}
-      <div className="flex-1 flex flex-col relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 py-6 md:py-10 pb-24 md:pb-12">
+      <div className="flex-1 flex flex-col relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8 py-6 md:py-10 pb-28 md:pb-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
