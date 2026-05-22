@@ -1,16 +1,21 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Compass, BookOpen, Heart, Sparkles } from 'lucide-react';
+import { Compass, BookOpen, LayoutDashboard, Settings as SettingsIcon, Sun } from 'lucide-react';
+import { useDailyVerse } from '../hooks/useDailyVerse.js';
 
 export default function BottomNav({ favoritesCount }) {
   const location = useLocation();
+  const { dailyVerse } = useDailyVerse();
+  
+  const dailyVersePath = dailyVerse ? `/verse/${dailyVerse.chapter}/${dailyVerse.verse}` : `/verse/2/47`;
 
   const navItems = [
     { name: 'Home', path: '/', icon: Compass },
+    { name: 'Daily Verse', path: dailyVersePath, icon: Sun },
     { name: 'Chapters', path: '/chapters', icon: BookOpen },
-    { name: 'Saved', path: '/favorites', icon: Heart, badge: favoritesCount },
-    { name: 'Meditation', path: '/meditation', icon: Sparkles },
+    { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
+    { name: 'Settings', path: '/settings', icon: SettingsIcon },
   ];
 
   return (

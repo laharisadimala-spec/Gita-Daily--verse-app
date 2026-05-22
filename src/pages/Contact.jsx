@@ -1,15 +1,36 @@
-import React, { useState } from 'react';
-import { Mail, Send, Heart } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, Send, Heart, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import GlassCard from '../components/GlassCard.jsx';
 import PrimaryButton from '../components/PrimaryButton.jsx';
 
 export default function Contact() {
+  const form = useRef();
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate sending
-    setTimeout(() => setSent(true), 500);
+    setLoading(true);
+    setError(null);
+
+    // Replace these with your actual EmailJS credentials
+    const serviceID = 'service_gita_daily';
+    const templateID = 'template_contact';
+    const publicKey = 'YOUR_PUBLIC_KEY';
+
+    emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+      .then((result) => {
+          setSent(true);
+      })
+      .catch((err) => {
+          console.error('EmailJS Error:', err);
+          setError('Failed to send message. Please try again or email us directly.');
+      })
+      .finally(() => {
+          setLoading(false);
+      });
   };
 
   return (
@@ -49,28 +70,57 @@ export default function Contact() {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
+              {error && (
+                <div className="p-3 bg-red-50 border border-red-200 text-red-600 text-sm rounded-xl text-center">
+                  {error}
+                </div>
+              )}
               <div>
                 <label className="block text-xs font-bold text-cream-900 uppercase tracking-wider mb-1">Your Name</label>
                 <input 
                   type="text" 
+                  name="user_name"
                   required
-                  className="w-full px-4 py-2 bg-white/70 backdrop-blur-sm border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-saffron-500 transition-colors shadow-sm"
+                  disabled={loading}
+                  className="w-full px-4 py-2 bg-white/70 backdrop-blur-sm border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-saffron-500 transition-colors shadow-sm disabled:opacity-50"
                   placeholder="Arjuna"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-cream-900 uppercase tracking-wider mb-1">Your Email</label>
+                <input 
+                  type="email" 
+                  name="user_email"
+                  required
+                  disabled={loading}
+                  className="w-full px-4 py-2 bg-white/70 backdrop-blur-sm border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-saffron-500 transition-colors shadow-sm disabled:opacity-50"
+                  placeholder="arjuna@kurukshetra.com"
                 />
               </div>
               <div>
                 <label className="block text-xs font-bold text-cream-900 uppercase tracking-wider mb-1">Your Message</label>
                 <textarea 
+                  name="message"
                   required
+                  disabled={loading}
                   rows="4"
-                  className="w-full px-4 py-2 bg-white/70 backdrop-blur-sm border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-saffron-500 transition-colors shadow-sm resize-none"
+                  className="w-full px-4 py-2 bg-white/70 backdrop-blur-sm border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-saffron-500 transition-colors shadow-sm resize-none disabled:opacity-50"
                   placeholder="Share your thoughts or questions..."
                 ></textarea>
               </div>
-              <PrimaryButton type="submit" variant="primary" className="w-full justify-center">
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
+              <PrimaryButton type="submit" variant="primary" className="w-full justify-center" disabled={loading}>
+                {loading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Send Message
+                  </>
+                )}
               </PrimaryButton>
             </form>
           )}
