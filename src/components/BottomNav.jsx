@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Compass, BookOpen, LayoutDashboard, Settings as SettingsIcon, Sun } from 'lucide-react';
+import { Compass, BookOpen, LayoutDashboard, Settings as SettingsIcon, Sun, Music } from 'lucide-react';
 import { useDailyVerse } from '../hooks/useDailyVerse.js';
 
 export default function BottomNav({ favoritesCount }) {
@@ -15,6 +15,7 @@ export default function BottomNav({ favoritesCount }) {
     { name: 'Daily Verse', path: dailyVersePath, icon: Sun },
     { name: 'Chapters', path: '/chapters', icon: BookOpen },
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
+    { name: 'Meditation', path: '/meditation', icon: Music },
     { name: 'Settings', path: '/settings', icon: SettingsIcon },
   ];
 

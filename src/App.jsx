@@ -39,20 +39,36 @@ import { useFavorites } from './hooks/useFavorites.js';
 import { useProgress } from './hooks/useProgress.js';
 import { useDailyVerse } from './hooks/useDailyVerse.js';
 
-// Services
-import { requestNotificationPermission } from './services/firebaseMessaging.js';
+// Native Notifications handled below
 
 export function AppContent() {
   const { favorites, toggleFavorite, clearFavorites } = useFavorites();
   const { notes, saveNote, resetProgress } = useProgress();
   const { dailyVerse } = useDailyVerse();
 
-  // Safely request notification permissions after the app loads
+  // Safely request notification permissions and show a local welcome/reminder
   useEffect(() => {
+    const requestNativePermission = async () => {
+      if ('Notification' in window) {
+        if (Notification.permission === 'default') {
+          try {
+            const permission = await Notification.requestPermission();
+            if (permission === 'granted') {
+              // Show a test local notification when permission is first granted
+              new Notification('Today’s Gita Wisdom 🌸', {
+                body: 'Tap to read today’s Bhagavad Gita verse.',
+                icon: '/icons/icon-192x192.png'
+              });
+            }
+          } catch (err) {
+            console.warn("Notification permission request failed:", err);
+          }
+        }
+      }
+    };
+
     const timer = setTimeout(() => {
-      requestNotificationPermission().catch(err => {
-        console.warn("FCM Notification Permission request was skipped or failed:", err);
-      });
+      requestNativePermission();
     }, 4000);
     return () => clearTimeout(timer);
   }, []);

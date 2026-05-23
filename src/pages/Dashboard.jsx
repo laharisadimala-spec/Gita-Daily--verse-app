@@ -76,6 +76,32 @@ export default function Dashboard({ favorites = [], notes = {} }) {
         </div>
       </div>
 
+      {/* Progress Bar & Actions (Moved to Top for Prominence) */}
+      <GlassCard className="space-y-4">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-bold text-cream-950 uppercase tracking-wider">Sadhana Progress</span>
+          <span className="text-xs font-bold text-saffron-600">{readCount} of {totalVerses} verses read</span>
+        </div>
+        <div className="w-full h-3 bg-cream-100 rounded-full overflow-hidden border border-cream-200">
+          <div 
+            className="h-full bg-gradient-to-r from-saffron-500 via-gold-400 to-saffron-600 transition-all duration-1000 ease-out"
+            style={{ width: `${completionPercentage}%` }}
+          />
+        </div>
+        
+        <div className="flex flex-wrap gap-4 pt-2 justify-end">
+          <PrimaryButton onClick={() => navigate('/archive')} variant="outline" className="text-xs">
+            Browse Archive
+          </PrimaryButton>
+          <PrimaryButton onClick={() => navigate('/moods')} variant="outline" className="text-xs">
+            Filter by Mood
+          </PrimaryButton>
+          <PrimaryButton onClick={() => navigate('/verse/2/47')} variant="primary" className="text-xs">
+            Study Daily Verse <ArrowRight className="w-3.5 h-3.5" />
+          </PrimaryButton>
+        </div>
+      </GlassCard>
+
       {/* Daily Quote Card */}
       <GlassCard className="relative overflow-hidden border-l-4 border-l-saffron-550 !p-6 bg-saffron-50/10">
         <span className="text-[10px] font-bold text-saffron-600 uppercase tracking-widest block mb-2">Wisdom of the Day</span>
@@ -127,32 +153,6 @@ export default function Dashboard({ favorites = [], notes = {} }) {
           </div>
         </GlassCard>
       </div>
-
-      {/* Progress Bar & Actions */}
-      <GlassCard className="space-y-4">
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-bold text-cream-950 uppercase tracking-wider">Sadhana Progress</span>
-          <span className="text-xs font-bold text-saffron-600">{readCount} of {totalVerses} verses read</span>
-        </div>
-        <div className="w-full h-3 bg-cream-100 rounded-full overflow-hidden border border-cream-200">
-          <div 
-            className="h-full bg-gradient-to-r from-saffron-500 via-gold-400 to-saffron-600 transition-all duration-1000 ease-out"
-            style={{ width: `${completionPercentage}%` }}
-          />
-        </div>
-        
-        <div className="flex flex-wrap gap-4 pt-2 justify-end">
-          <PrimaryButton onClick={() => navigate('/archive')} variant="outline" className="text-xs">
-            Browse Archive
-          </PrimaryButton>
-          <PrimaryButton onClick={() => navigate('/moods')} variant="outline" className="text-xs">
-            Filter by Mood
-          </PrimaryButton>
-          <PrimaryButton onClick={() => navigate('/verse/2/47')} variant="primary" className="text-xs">
-            Study Daily Verse <ArrowRight className="w-3.5 h-3.5" />
-          </PrimaryButton>
-        </div>
-      </GlassCard>
 
       {/* Recent Activity / Reflections */}
       <GlassCard>

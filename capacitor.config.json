@@ -1,0 +1,6 @@
+{
+  "appId": "com.laharisadimala.gitadaily",
+  "appName": "Gita Daily",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

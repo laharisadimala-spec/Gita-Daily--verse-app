@@ -29,34 +29,26 @@ export default function DailyVerse({ favorites, toggleFavorite, notes, saveNote,
     setLocalNote(notes[key] || '');
   }, [notes, key]);
 
-  // Sanskrit recitation audio support using browser's SpeechSynthesis API
+  // Calming Sanskrit chanting audio (Om Mantra)
   useEffect(() => {
-    if (isAudioPlaying && verse) {
-      const textToRecite = verse.transliteration;
-      const utterance = new SpeechSynthesisUtterance(textToRecite);
-      utterance.rate = 0.85; // Serene, meditative flow
-      utterance.pitch = 0.95;
-      
-      // Attempt to load Indian Hindi/English voice for optimal Sanskrit rhythm
-      const voices = window.speechSynthesis.getVoices();
-      const indianVoice = voices.find(v => v.lang.includes('hi') || v.lang.includes('IN'));
-      if (indianVoice) {
-        utterance.voice = indianVoice;
-      }
-
-      utterance.onend = () => setIsAudioPlaying(false);
-      utterance.onerror = () => setIsAudioPlaying(false);
-
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utterance);
-    } else {
-      window.speechSynthesis.cancel();
+    let audio = null;
+    if (isAudioPlaying) {
+      audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/2/23/Om_Mantra.ogg');
+      audio.loop = true;
+      audio.volume = 0.5; // Soft peaceful volume
+      audio.play().catch(e => {
+        console.warn("Audio playback failed:", e);
+        setIsAudioPlaying(false);
+      });
     }
 
     return () => {
-      window.speechSynthesis.cancel();
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
     };
-  }, [isAudioPlaying, verse]);
+  }, [isAudioPlaying]);
 
   if (!verse || !currentChapter) {
     return (
