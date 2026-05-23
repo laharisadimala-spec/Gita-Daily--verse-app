@@ -29,26 +29,34 @@ export default function DailyVerse({ favorites, toggleFavorite, notes, saveNote,
     setLocalNote(notes[key] || '');
   }, [notes, key]);
 
-  // Calming Sanskrit chanting audio (Om Mantra)
-  useEffect(() => {
-    let audio = null;
+  const audioRef = React.useRef(null);
+  
+  const toggleAudio = () => {
+    if (!audioRef.current) return;
+    
     if (isAudioPlaying) {
-      audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/2/23/Om_Mantra.ogg');
-      audio.loop = true;
-      audio.volume = 0.5; // Soft peaceful volume
-      audio.play().catch(e => {
-        console.warn("Audio playback failed:", e);
+      audioRef.current.pause();
+      setIsAudioPlaying(false);
+    } else {
+      audioRef.current.volume = 0.5;
+      audioRef.current.play().then(() => {
+        setIsAudioPlaying(true);
+      }).catch(e => {
+        console.warn("Audio playback failed (check APK permissions):", e);
         setIsAudioPlaying(false);
       });
     }
+  };
 
+  // Cleanup on unmount
+  useEffect(() => {
     return () => {
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
       }
     };
-  }, [isAudioPlaying]);
+  }, []);
 
   if (!verse || !currentChapter) {
     return (
@@ -140,13 +148,19 @@ export default function DailyVerse({ favorites, toggleFavorite, notes, saveNote,
 
       {/* Main Scripture details */}
       <GlassCard className="!p-0 overflow-hidden relative shadow-spiritual-lg">
+        <audio 
+          ref={audioRef} 
+          src="https://upload.wikimedia.org/wikipedia/commons/2/23/Om_Mantra.ogg" 
+          loop 
+          preload="auto" 
+        />
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-saffron-500 via-gold-450 to-saffron-600" />
         
         {/* Audio control & Actions header bar */}
         <div className="flex justify-between items-center px-6 py-4 bg-cream-100/30 border-b border-cream-150/60">
           <div className="flex items-center gap-2.5">
             <button
-              onClick={() => setIsAudioPlaying(!isAudioPlaying)}
+              onClick={toggleAudio}
               className={`flex items-center gap-2 text-xs font-bold px-4 py-1.5 rounded-full border transition-all duration-300 ${
                 isAudioPlaying
                   ? 'bg-saffron-600 border-saffron-600 text-white shadow-gold-glow'
